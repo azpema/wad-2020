@@ -58,9 +58,41 @@ section{
     margin: 0 auto;
     justify-content: center;
     align-content: center;
+    padding: 10px;
 }
 
+section .post{
+    width:80%;
+    padding:20px, 20px, 0, 0;
+    -webkit-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+}
 
+section div{
+    margin: 0 auto;
+}
 
+.img-profile{
+    width: 50px;
+}
+
+.img-post{
+    width:100%
+}
+
+.post button{
+    height:50px;
+    width:80px;
+    background-color: #2580cf;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 5px;
+}
+.post button img{
+    height: 100%;
+}
 
 
