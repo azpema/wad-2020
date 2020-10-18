@@ -114,20 +114,21 @@ nav div.avatar-container {
 }
 
 /* somehow position dropdown over everything else, under profile image...*/
-#profile-menu {
-    /*display:none;*/
-    border: 2px solid red;
-    background-color: azure;
+.dropdown {
+    display:none;
+    border: 1px solid grey;
+    background-color: white;
     position: absolute;
     top:100%;
     right:0;
-    width: 300px;
     height:auto;
+    padding: 1.5em;
 }
-#profile-menu a,
-#profile-menu span {
+.dropdown a,
+.dropdown span {
     display: block;
     position: relative;
+    height: 2em;
 }
 
 

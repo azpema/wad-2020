@@ -1,5 +1,5 @@
+/* executes after page fully loaded: */
 $(function() {
-
     console.log("JQuery loaded and working");
 
     /*Profile drop-down*/
@@ -9,13 +9,17 @@ $(function() {
 
     /* Fetch user info and put it into dropdown */
     $.get('https://private-anon-6783f8eed5-wad20postit.apiary-mock.com/users/1')
-        .done((ret)=> {
-            console.log(ret);
-
-            let userinfo = $('<span>').text(ret.firstname + " " + ret.lastname);
-            let email = $('<span>').text( ret.email );
-            $('#profile-menu').prepend( userinfo, email );
-            $('img.avatar').attr('src', ret.avatar);
-        })
+        .done( (data) => updateUserInfo(data) )
         .fail((error) => console.log(error));
 })
+
+
+
+function updateUserInfo(data) {
+    console.log(data);
+
+    let userinfo = $('<span>').text(data.firstname + " " + data.lastname);
+    let email = $('<span>').text( data.email );
+    $('#profile-menu').prepend( userinfo, email );
+    $('img.avatar').attr('src', data.avatar);
+}
